@@ -18,9 +18,6 @@ namespace SiteContagem.Pages
                 _CONTADOR.Incrementar();
                 logger.LogInformation($"Contador - Valor atual: {_CONTADOR.ValorAtual}");
 
-                if (_CONTADOR.ValorAtual % 4 == 0)
-                    throw new Exception("Simulação de Erro em Index.cshtml.cs...");
-
                 TempData["Contador"] = _CONTADOR.ValorAtual;
                 TempData["Local"] = _CONTADOR.Local;
                 TempData["Kernel"] = _CONTADOR.Kernel;
